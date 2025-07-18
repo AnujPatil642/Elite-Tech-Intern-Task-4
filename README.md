@@ -48,19 +48,19 @@ encryption-tool/
 Key Derivation:
 Uses PBKDF2 with a random 16-byte salt and 1 million iterations to derive a 256-bit key from the password.
 
-Encryption Process:-
+a)Encryption Process:-
 
-Pads data to AES block size
+1.Pads data to AES block size
 
-Uses random IV for each file
+2.Uses random IV for each file
 
-Saves output as: salt + iv + ciphertext
+3.Saves output as: salt + iv + ciphertext
 
-Decryption Process:-
+b)Decryption Process:-
 
-Extracts salt and IV from the encrypted file
+1.Extracts salt and IV from the encrypted file
 
-Derives the key again using password + salt
+2.Derives the key again using password + salt
 
-Decrypts and unpads the data
+3.Decrypts and unpads the data
 
